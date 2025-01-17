@@ -7,8 +7,19 @@ spring:
     username: root
     password: sqlpassword
     driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: USER-SERVICE
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
